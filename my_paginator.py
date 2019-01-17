@@ -3,13 +3,9 @@
 
 class Mypaginator:
     def __init__(self, totalCount, currentPage, itemsPerPage=10, maxPageNum=7 ):
-        #数据总个数
         self.total_count = totalCount
-        #当前页
         self.current_page = int(currentPage)
-        #每页数据条数
         self.items_per_page = itemsPerPage
-        #最多显示页数
         self.max_page_num = maxPageNum
 
     @property
@@ -28,17 +24,17 @@ class Mypaginator:
         return (self.total_count/self.items_per_page)+1
 
     def page_range(self):
-        #print(1)
+        print(1)
         if self.num_pages < self.max_page_num:
             return range(1, self.num_pages + 1)
-        #print(2)
+        print(2)
         part = int(self.max_page_num / 2)
         if self.current_page - part < 1:
             return range(1, self.max_page_num + 1)
-        #print(3)
+        print(3)
         if self.current_page + part > self.num_pages:
             return range(self.num_pages + 1 - self.max_page_num, self.num_pages + 1)
-        #print(4)
+        print(4)
         return range(self.current_page - part, self.current_page + part + 1)
 
     def page_str(self):
