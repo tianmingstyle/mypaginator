@@ -3,9 +3,13 @@
 
 class Mypaginator:
     def __init__(self, totalCount, currentPage, itemsPerPage=10, maxPageNum=7 ):
+        #数据总个数
         self.total_count = totalCount
+        #当前页
         self.current_page = int(currentPage)
+        #每页行数
         self.items_per_page = itemsPerPage
+        #最多显示页面
         self.max_page_num = maxPageNum
 
     @property
