@@ -1,6 +1,6 @@
 ﻿# coding:utf-8
 
-#hello world
+
 class Mypaginator:
     def __init__(self, totalCount, currentPage, itemsPerPage=10, maxPageNum=7 ):
         self.total_count = totalCount
